@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&family=Roboto&display=swap');
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>SOLSYSTEMET</title>
+</head>
+<body>
+    <header>
+        <form action="/action_page.php">
+            <label for="planet">Sök planet:</label>
+            <br>
+            <input type="text" id="planet" name="planet">
+            <input type="submit" value="Sök">
+          </form>
+        <h1>SOLSYSTEMET</h1>
+    </header>
+
+<section class="index-section" id="light-box">
+</section>
+
+<nav>
+    <img src="img/sun.png" alt="solen" onclick="renderPlanet(0)"/>
+    <img src="img/mercury.png" alt="merkurius" onclick="renderPlanet(1)"/>
+    <img src="img/venus.png" alt="venus" onclick="renderPlanet(2)"/>
+    <img src="img/earth.png" alt="jorden" onclick="renderPlanet(3)"/>
+    <img src="img/mars.png" alt="mars" onclick="renderPlanet(4)"/>
+    <img src="img/jupiter.png" alt="jupiter" onclick="renderPlanet(5)"/>
+    <img src="img/saturn.png" alt="saturnus" onclick="renderPlanet(6)"/>
+    <img src="img/uranus.png" alt="uranus" onclick="renderPlanet(7)"/>
+    <img src="img/neptune.png" alt="neptunus" onclick="renderPlanet(8)"/>
+</nav>
+
+    <script src="index.js"></script>
+</body>
+</html>
