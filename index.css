@@ -31,12 +31,8 @@ input {
 }
 
 hr {
-    max-width: 55vh;
-    border: dashed;
-    border-width: 1px;
-    color: #ffffff21;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
+    border: 3px dashed rgba(255, 255, 255, 0.274);
+    width: 40vh;
 }
 
 header {
@@ -44,11 +40,10 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    padding-right: 5rem;
 }
 
 .index-section {
-    height: 70%;
+    height: 65%;
 }
 
 nav {
@@ -59,10 +54,6 @@ nav {
     border-color: #fff;;
     color: #e7cf60;
     font-size: 100px;
-}
-
-footer {
-
 }
 
 img {
@@ -90,6 +81,7 @@ h2  {
     letter-spacing: 1rem;
     margin-block-start: 0;
     margin-block-end: 0;
+    padding-bottom: 2rem;
 }
 
 h4 {
@@ -107,15 +99,64 @@ p {
     font-size: 0.8rem;
     letter-spacing: 0.1em;
     line-height: 1.8em;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
-.grid-info {
+.grid-info1 {
     font-family: 'Roboto', sans-serif;
     font-size: 0.8rem;
     letter-spacing: 0.1em;
     line-height: 1.8em;
     margin-block-start: 0;
     margin-block-end: 0;
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+.grid-info2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    line-height: 1.8em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    grid-column: 2 / 3;
+    grid-row: 1;
+}
+
+.grid-info3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    line-height: 1.8em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    grid-column: 1 / 2;
+    grid-row: 2;
+}
+
+.grid-info4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    line-height: 1.8em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    grid-column: 2 / 3;
+    grid-row: 2;
+}
+
+.grid-info5 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    line-height: 1.8em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 3;
 }
 
 .planet-title {
@@ -126,39 +167,24 @@ p {
 }
 
 .planet-info {
-    max-width: 55vh;
-    max-height: 55vh;
+    max-width: 40vh;
+    max-height: 40vh;
+    padding-bottom: 1rem;
 }
 
 .planet-info-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
-    max-width: 55vh;
-}
-
-.planet-moons-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
-    max-width: 55vh;
+    max-width: 100%;
 }
 
 .planet-info-grid {
     display: grid;
-    grid-template-columns: 100% 100%;
-    column-gap: 0.5rem;
-    row-gap: 0.5rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    grid-template-columns: 19.3vh 19.3vh;
+    grid-template-rows: 3rem 3rem auto;
+    grid-gap: 1rem;
+    border-top-style: dotted;
+    border-bottom-style: dotted;
 }
 
-.planet-moons {
-    max-width: 55vh;
-    text-align: left;
-}
