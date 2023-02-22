@@ -64,10 +64,10 @@ function renderPlanet(id) {
       lightBox.appendChild(text);
 }
 
-  function showTitle() {
-    document.getElementById("navbar-(id)").element.style = "block";
-  }
-
-  function hideTitle() {
-    document.getElementById("navbar-(id)").element.style = "none";
-      }
+function btnClick () {
+    const searchInput = document.getElementById("search-input").value
+    console.log(searchInput);
+    const foundPlanets = planets.filter(planet => 
+        planet.name.toLowerCase().includes(searchInput.toLowerCase()))
+renderPlanet(id)
+}
