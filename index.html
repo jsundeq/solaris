@@ -12,28 +12,91 @@
 </head>
 <body>
     <header>
-        <form action="/action_page.php">
-            <label for="planet">Sök planet:</label>
-            <br>
-            <input type="text" id="planet" name="planet">
-            <input type="submit" value="Sök">
-          </form>
-        <h1>SOLSYSTEMET</h1>
+        
+        <article class="form-container">
+            <form class="form">
+                <label for="planet">Sök planet:</label>
+                <br>
+                <input id="search-input" type="text" class="input">
+                <input type="submit" value="Sök">
+                <button id="clear" class="clear-results">Radera</button>
+            </form>
+        <aside class="search-result">
+            <p>Här kommer sökresultatet</p>
+        </aside>
+        </article>
+                <h1>SOLSYSTEMET</h1>
     </header>
 
-<section class="index-section" id="light-box">
-</section>
+    <section class="index-section" id="light-box"></section>
 
-<nav>
-    <img src="img/sun.png" alt="solen" onclick="renderPlanet(0)"/>
-    <img src="img/mercury.png" alt="merkurius" onclick="renderPlanet(1)"/>
-    <img src="img/venus.png" alt="venus" onclick="renderPlanet(2)"/>
-    <img src="img/earth.png" alt="jorden" onclick="renderPlanet(3)"/>
-    <img src="img/mars.png" alt="mars" onclick="renderPlanet(4)"/>
-    <img src="img/jupiter.png" alt="jupiter" onclick="renderPlanet(5)"/>
-    <img src="img/saturn.png" alt="saturnus" onclick="renderPlanet(6)"/>
-    <img src="img/uranus.png" alt="uranus" onclick="renderPlanet(7)"/>
-    <img src="img/neptune.png" alt="neptunus" onclick="renderPlanet(8)"/>
+<nav id="planet-navbar">
+    <ul>
+        <li>
+            <img src="img/sun.png" alt="solen" id="solen"  onclick="renderPlanet(0)"/>
+        </li>
+        <li>
+            <img src="img/mercury.png" alt="merkurius" id="merkurius" onmouseover="renderPlanetTitle(1)" onclick="renderPlanet(1)"/>
+        </li>
+        <li>
+            <img src="img/venus.png" alt="venus" id="venus" onmouseover="renderPlanetTitle(2)" onclick="renderPlanet(2)"/>
+        </li>
+        <li>
+            <img src="img/earth.png" alt="jorden" id="jorden" onmouseover="renderPlanetTitle(3)" onclick="renderPlanet(3)"/>
+        </li>
+        <li>
+            <img src="img/mars.png" alt="mars" id="mars" onmouseover="renderPlanetTitle(4)" onclick="renderPlanet(4)"/>
+        </li>
+        <li>
+            <img src="img/jupiter.png" alt="jupiter" id="jupiter" onmouseover="renderPlanetTitle(5)" onclick="renderPlanet(5)"/>
+        </li>
+        <li>
+            <img src="img/saturn.png" alt="saturnus" id="saturnus" onmouseover="renderPlanetTitle(6)" onclick="renderPlanet(6)"/>
+        </li>
+        <li>
+            <img src="img/uranus.png" alt="uranus" id="uranus" onmouseover="renderPlanetTitle(7)" onclick="renderPlanet(7)"/>
+        </li>
+        <li>
+            <img src="img/neptune.png" alt="neptunus" id="neptunus" onmouseover="renderPlanetTitle(8)" onclick="renderPlanet(8)"/>
+        </li>
+
+        <aside id="navbar-sun">
+            <p>Solen</p>
+            </aside>
+            
+            <aside class="navbar-mercury">
+            <p>Merkurius</p>
+            </aside>
+            
+            <aside class="navbar-venus">
+            <p>Venus</p>
+            </aside>
+            
+            <aside class="navbar-earth">
+            <p>Jorden</p>
+            </aside>
+            
+            <aside class="navbar-mars">
+            <p>Mars</p>
+            </aside>
+            
+            <aside class="navbar-jupiter">
+            <p>Jupiter</p>
+            </aside>
+            
+            <aside class="navbar-saturn">
+            <p>Saturnus</p>
+            </aside>
+            
+            <aside class="navbar-uranus">
+            <p>Uranus</p>
+            </aside>
+            
+            <aside class="navbar-neptune">
+            <p>Neptunus</p>
+            </aside>
+            
+    </ul>
 </nav>
 
     <script src="index.js"></script>

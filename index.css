@@ -11,6 +11,14 @@ a {
     text-decoration: none;
 }
 
+.form-container {
+    padding-top: 1rem;
+}
+
+.search-result {
+    text-align: left;
+}
+
 label {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
@@ -19,7 +27,7 @@ label {
     padding-bottom: 2rem;
 }
 
-input {
+input, button{
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     letter-spacing: 0.1em;
@@ -45,34 +53,62 @@ header {
     align-items: center;
     justify-content: space-evenly;
     padding-right: 5rem;
+    margin-top: 1rem;
 }
 
 .index-section {
-    height: 70%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60%;
 }
 
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+ul {
+    display: grid;
+    grid-template-columns: 8rem 8rem 8rem 8rem 8rem 8rem 8rem 8rem 8rem;
+    grid-template-rows: auto auto;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
     border-width: 2px;
     border-color: #fff;;
     color: #e7cf60;
     font-size: 100px;
 }
 
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside {
+    text-align: center;
+    max-height: 2rem;
+}
+
 footer {
 
 }
 
+li {
+    max-width: 8rem;
+    list-style-type: none;
+}
+
 img {
     max-width: 8rem;
-    opacity: 0.8;
+    opacity: 0.5;
 }
 
 img:hover {
     max-width: 8rem;
     opacity: 1;
+    cursor: pointer;
 }
 
 h1 {
@@ -83,13 +119,36 @@ h1 {
     margin-block-end: 0;
 }
 
+.h1-planet-title {
+    font-family: 'Averia Serif Libre', cursive;
+    font-size: 5rem;
+    color: #ecd554e8;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.planet-header {
+    text-align: center;
+}
+
 h2  {
     font-family: 'Averia Serif Libre', cursive;
     font-size: 1.5rem;
-    color: #ecd554e8;
-    letter-spacing: 1rem;
+    color: #eaf18157;
+    letter-spacing: 1.5rem;
     margin-block-start: 0;
     margin-block-end: 0;
+}
+
+.h2-planet-undertitle {
+    font-family: 'Averia Serif Libre', cursive;
+    font-size: 1.5rem;
+    color: #eaf18157;
+    letter-spacing: 1.5rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 h4 {
@@ -109,6 +168,15 @@ p {
     line-height: 1.8em;
 }
 
+nav p {
+    color: #ecd554e8;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    line-height: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
 .grid-info {
     font-family: 'Roboto', sans-serif;
     font-size: 0.8rem;
@@ -126,20 +194,11 @@ p {
 }
 
 .planet-info {
-    max-width: 55vh;
-    max-height: 55vh;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 .planet-info-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
-    max-width: 55vh;
-}
-
-.planet-moons-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -149,16 +208,37 @@ p {
     max-width: 55vh;
 }
 
+.planet-moons-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    max-width: 55vh;
+}
+
 .planet-info-grid {
     display: grid;
-    grid-template-columns: 100% 100%;
+    grid-template-columns: 27vh 27.5vh;
+    grid-template-rows: auto;
     column-gap: 0.5rem;
     row-gap: 0.5rem;
+}
+
+.grid-4-in-info {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
 
 .planet-moons {
-    max-width: 55vh;
-    text-align: left;
+    min-width: 98%;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
