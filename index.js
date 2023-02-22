@@ -11,6 +11,9 @@ async function getSolarSystem() {
 
 getSolarSystem();
 
+// const searchBox = document.getElementById("planet")
+//     console.log(searchBox);
+
 function renderPlanet(id) {
     const planet = planets.find(planet => planet.id===id);
     const lightBox = document.getElementById("light-box");
