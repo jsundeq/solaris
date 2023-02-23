@@ -14,53 +14,49 @@
     <header>
         
         <article class="form-container">
-            
-                <label for="planet">Sök planet:</label>
+            <label for="planet">Sök planet:</label>
                 <br>
-                <input id="search-input" type="text" class="input">
-                <button id="search" class="search-button" onclick="btnClick()">Sök</button>
-                <button id="clear" class="clear-results">Radera</button>
-            
-        <aside class="search-result">
-            <p>Här kommer sökresultatet</p>
-        </aside>
+                <input id="search-input" type="text" onfocus="this.value=''" class="input">
+                <button id="clear" onclick="clearSearchResult()" class="clear-results">Radera</button>
+            <section id="search-result" class="search-result">
+        </section>
         </article>
                 <h1>SOLSYSTEMET</h1>
     </header>
 
-    <section class="index-section" id="light-box"></section>
+    <section class="planet-container"></section>
 
 <nav id="planet-navbar">
     <ul>
         <li>
-            <img src="img/sun.png" alt="solen" id="solen"  onclick="renderPlanet(0)"/>
+            <img src="img/sun.png" alt="solen" id="solen" onclick="renderPlanet(0)"/>
         </li>
         <li>
-            <img src="img/mercury.png" alt="merkurius" id="merkurius" onmouseover="renderPlanetTitle(1)" onclick="renderPlanet(1)"/>
+            <img src="img/mercury.png" alt="merkurius" id="merkurius" onclick="renderPlanet(1)"/>
         </li>
         <li>
-            <img src="img/venus.png" alt="venus" id="venus" onmouseover="renderPlanetTitle(2)" onclick="renderPlanet(2)"/>
+            <img src="img/venus.png" alt="venus" id="venus" onclick="renderPlanet(2)"/>
         </li>
         <li>
-            <img src="img/earth.png" alt="jorden" id="jorden" onmouseover="renderPlanetTitle(3)" onclick="renderPlanet(3)"/>
+            <img src="img/earth.png" alt="jorden" id="jorden" onclick="renderPlanet(3)"/>
         </li>
         <li>
-            <img src="img/mars.png" alt="mars" id="mars" onmouseover="renderPlanetTitle(4)" onclick="renderPlanet(4)"/>
+            <img src="img/mars.png" alt="mars" id="mars" onclick="renderPlanet(4)"/>
         </li>
         <li>
-            <img src="img/jupiter.png" alt="jupiter" id="jupiter" onmouseover="renderPlanetTitle(5)" onclick="renderPlanet(5)"/>
+            <img src="img/jupiter.png" alt="jupiter" id="jupiter" onclick="renderPlanet(5)"/>
         </li>
         <li>
-            <img src="img/saturn.png" alt="saturnus" id="saturnus" onmouseover="renderPlanetTitle(6)" onclick="renderPlanet(6)"/>
+            <img src="img/saturn.png" alt="saturnus" id="saturnus" onclick="renderPlanet(6)"/>
         </li>
         <li>
-            <img src="img/uranus.png" alt="uranus" id="uranus" onmouseover="renderPlanetTitle(7)" onclick="renderPlanet(7)"/>
+            <img src="img/uranus.png" alt="uranus" id="uranus" onclick="renderPlanet(7)"/>
         </li>
         <li>
-            <img src="img/neptune.png" alt="neptunus" id="neptunus" onmouseover="renderPlanetTitle(8)" onclick="renderPlanet(8)"/>
+            <img src="img/neptune.png" alt="neptunus" id="neptunus" onclick="renderPlanet(8)"/>
         </li>
 
-        <aside id="navbar-sun">
+        <aside class="navbar-sun">
             <p>Solen</p>
             </aside>
             

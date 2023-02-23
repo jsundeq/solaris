@@ -1,3 +1,12 @@
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
 body {
     background-image: url("img/universe.png");
     height: 100vh;
@@ -16,7 +25,10 @@ a {
 }
 
 .search-result {
+    color: #ffffffcc;
+    margin-top: 1rem;
     text-align: left;
+    padding-left: 1rem;
 }
 
 label {
@@ -24,10 +36,10 @@ label {
     font-size: 1rem;
     letter-spacing: 0.1em;
     line-height: 1.2rem;
-    padding-bottom: 2rem;
+    color: #ffffff83;
 }
 
-input, button{
+.input {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     letter-spacing: 0.1em;
@@ -38,9 +50,26 @@ input, button{
     border-radius: 4px;
 }
 
+.clear-results {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    line-height: 1.2rem;
+    background-color: #97bcec5d;
+    color: #ffffffde;
+    padding: .5rem 1rem .5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.clear-results:hover {
+    color: #ffffff;
+    background-color: #b4cdec5d;
+}
+
 hr {
     border: 3px dashed rgba(255, 255, 255, 0.274);
-    width: 40vh;
+    width: 55vh;
 }
 
 header {
@@ -50,9 +79,10 @@ header {
     justify-content: space-evenly;
     padding-right: 5rem;
     margin-top: 1rem;
+    min-height: 15vh;
 }
 
-.index-section {
+.planet-container {
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -82,13 +112,14 @@ nav {
     align-items: center;
 }
 
-aside {
-    text-align: center;
+.search-result {
+    text-align: left;
     max-height: 2rem;
+    color: #fff;
 }
 
-footer {
-
+.search-result-text {
+    cursor: pointer;
 }
 
 li {
@@ -104,6 +135,7 @@ img {
 img:hover {
     max-width: 8rem;
     opacity: 1;
+    animation: rotation 15s infinite linear;
     cursor: pointer;
 }
 
@@ -124,7 +156,29 @@ h1 {
 }
 
 .planet-header {
+    display: grid;
+    grid-template-columns: 30% 75% 30%;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+}
+
+.pagination-btn--prev, .pagination-btn--next {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    background-color: #cccccc00;
+    cursor: pointer;
+    color: #ffffffc5;
+    border: none;
+}
+
+.pagination-btn--prev:hover, .pagination-btn--next:hover {
+    background-color: #cccccc00;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
 }
 
 h2  {
@@ -169,6 +223,7 @@ p {
 
 nav p {
     color: #ecd554e8;
+    text-align: center;
     font-size: 1.5rem;
     letter-spacing: 0.1em;
     line-height: 0;
@@ -185,6 +240,10 @@ nav p {
     margin-block-end: 0;
     grid-column: 1 / 2;
     grid-row: 1;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0;
+    padding-bottom: 0.5rem;
 }
 
 .grid-info2 {
@@ -254,33 +313,20 @@ nav p {
     max-width: 55vh;
 }
 
-.planet-moons-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
-    max-width: 55vh;
-}
-
 .planet-info-grid {
     display: grid;
-    grid-template-columns: 27vh 27.5vh;
-    grid-template-rows: auto;
-    column-gap: 0.5rem;
-    row-gap: 0.5rem;
+    grid-template-columns: 12vh 12vh 12vh 12vh;
+    grid-template-rows: 1.5vh 3vh 3vh 1.5vh;
+    column-gap: 1rem;
 }
 
-.grid-4-in-info {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+.grid-title {
+    padding: 0.5rem;
 }
 
 .planet-moons {
     min-width: 98%;
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    margin-left: 1.2rem;
 }
 
 .main-wrapper {
