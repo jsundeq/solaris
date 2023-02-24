@@ -32,23 +32,40 @@ function renderPlanet(id) {
     });
 
     planetContainerEl.innerHTML += `
-<section class="planet-header">
-    <article>
-    <button class="pagination-btn--prev" onclick="renderPlanet(${id - 1})"><-- Tidigare</button>
-    </article>
-    <article>
-    <h1 class="h1-planet-title">${planet.name}</h1>
-    <h2 class="h2-planet-undertitle">${planet.latinName}</h2>
-    </article>
-    <article>
-    <button class="pagination-btn--next" onclick="renderPlanet(${id + 1})">Nästa --></button>
-    </article>
-</section>
-<div class="planet-info-wrapper">
+<div class="planet-header-wrapper">
+
+    <figure class="planet-header-img-container">
+
+        <h1 class="h1-planet-title">
+            ${planet.name}
+        </h1>
+
+        <img src="img/${planet.name.toLowerCase()}.png" class="planet-header-img-container-img" alt="${planet.name}"/>
+        <h2 class="h2-planet-undertitle">
+            ${planet.latinName}
+        </h2>
+
+    </figure>
+
+    <section class="planet-header">
+
+        <article class="container-pagination-btn--prev">
+        <button class="pagination-btn--prev" onclick="renderPlanet(${id - 1})"><-- Tidigare</button>
+        </article>
+
+        <article class="container-pagination-btn--next">
+        <button class="pagination-btn--next" onclick="renderPlanet(${id + 1})">Nästa --></button>
+        </article>
+
+
     <section class="planet-info">
-        <p>${planet.desc}</p>
-    </section>
+        <p class="p-planet-info">${planet.desc}</p>
+        <br>
         <hr>
+    </section>
+
+        <hr>
+
     <section class="planet-info-grid">
         
         <article>
@@ -113,15 +130,17 @@ function renderPlanet(id) {
         <article>
         </article>
 
-        
-    </section>
-            <hr>
+        </section>
+
     <section class="planet-moons">
         <article>
+        <hr>
             <h4>MÅNAR</h4>
             <p>${moonString}</p>
         </article>
+
     </section>
+
 </div>
       `;
       planetContainerEl.appendChild(text);

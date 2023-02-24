@@ -11,8 +11,9 @@
     <title>SOLSYSTEMET</title>
 </head>
 <body>
+    <div class="wrapper">
     <header>
-        
+    
         <article class="form-container">
             <label for="planet">Sök planet:</label>
                 <br>
@@ -23,22 +24,20 @@
         </article>
                 <h1>SOLSYSTEMET</h1>
     </header>
-
     <section class="planet-container"></section>
-
 <nav id="planet-navbar">
     <ul>
         <li>
             <img src="img/sun.png" alt="solen" id="solen" onclick="renderPlanet(0)"/>
         </li>
         <li>
-            <img src="img/mercury.png" alt="merkurius" id="merkurius" onclick="renderPlanet(1)"/>
+            <img src="img/merkurius.png" alt="merkurius" id="merkurius" onclick="renderPlanet(1)"/>
         </li>
         <li>
             <img src="img/venus.png" alt="venus" id="venus" onclick="renderPlanet(2)"/>
         </li>
         <li>
-            <img src="img/earth.png" alt="jorden" id="jorden" onclick="renderPlanet(3)"/>
+            <img src="img/jorden.png" alt="jorden" id="jorden" onclick="renderPlanet(3)"/>
         </li>
         <li>
             <img src="img/mars.png" alt="mars" id="mars" onclick="renderPlanet(4)"/>
@@ -47,13 +46,13 @@
             <img src="img/jupiter.png" alt="jupiter" id="jupiter" onclick="renderPlanet(5)"/>
         </li>
         <li>
-            <img src="img/saturn.png" alt="saturnus" id="saturnus" onclick="renderPlanet(6)"/>
+            <img src="img/saturnus.png" alt="saturnus" id="saturnus" onclick="renderPlanet(6)"/>
         </li>
         <li>
             <img src="img/uranus.png" alt="uranus" id="uranus" onclick="renderPlanet(7)"/>
         </li>
         <li>
-            <img src="img/neptune.png" alt="neptunus" id="neptunus" onclick="renderPlanet(8)"/>
+            <img src="img/neptunus.png" alt="neptunus" id="neptunus" onclick="renderPlanet(8)"/>
         </li>
 
         <aside class="navbar-sun">
@@ -94,6 +93,7 @@
             
     </ul>
 </nav>
+</div>
 
     <script src="index.js"></script>
 </body>
