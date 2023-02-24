@@ -1,11 +1,28 @@
+// skapa en array
 let planetsArray = [];
+
+// skapa en variabel med namnet "url" baserat på adressen till APIet
 const url = "https://majazocom.github.io/Data/solaris.json";
+
+// skapa en variabel med namnet "searchInput" som pekar till DOMen och inputelementet med id "search-input"
 const searchInput = document.getElementById("search-input");
+
+// skapa en variabel med namnet "searchResultEl" som pekar till DOMen och <section>-elementet med id "search-result"
 const searchResultEl = document.getElementById("search-result");
+
+// skapa en variabel med namnet "planetContainerEl" som pekar till DOMen och <section>-elementet med class-namnet "planet-container".
+// Detta är platsen där information om planeterna skall renderas.
 const planetContainerEl = document.querySelector(".planet-container");
+
+// skapa en variabel med namnet "prevPlanetBtn" som pekar till DOMen och <button>-elementet med class-namnet "pagination-btn--prev".
+// Detta är "Tidigare-knappen" som skall paginera bakåt i listan av planeter.
 const prevPlanetBtn = document.querySelector(".pagination-btn--prev");
+
+// skapa en variabel med namnet "nextPlanetBtn" som pekar till DOMen och <button>-elementet med class-namnet "pagination-btn--next".
+// Detta är "Nästa-knappen" som skall paginera framåt i listan av planeter.
 const nextPlanetBtn = document.querySelector(".pagination-btn--next");
 
+// skapa en funktion med namnet "getSolarSystem()" som hämtar APIet med all planetinformation
 async function getSolarSystem() {
     try {
         let resp = await fetch(url); 
@@ -13,13 +30,15 @@ async function getSolarSystem() {
         console.log(data);
         planetsArray = data;
     }
+// om det inte går att hämta APIet så kommer felmeddelandet "error"
     catch (error) {
         console.log(error);
     }
     };
-
+// kör funktionen "getSolarSystem()
 getSolarSystem();
 
+// skapa en funktion för att rendera vald planet i <section>-elementet som har class-namnet "planet-container"
 function renderPlanet(id) {
     const planet = planetsArray.find(planet => planet.id===id);
     planetContainerEl.innerHTML = "";
@@ -30,7 +49,6 @@ function renderPlanet(id) {
     planet.moons.forEach(moon => {
         moonString += moon+", "
     });
-
     planetContainerEl.innerHTML += `
 <div class="planet-header-wrapper">
 
@@ -151,6 +169,7 @@ function renderPlanet(id) {
       }
 }
 
+// skapa en funktion för att rendera sökresultatet i <section>-elementet med id "search-result"
 function renderSearchResult(planetsArray) {
     searchResultEl.innerHTML = "";
     planetsArray.forEach(planet => {
@@ -163,11 +182,13 @@ function renderSearchResult(planetsArray) {
         });
     };
 
+// skapa en funktion för att rensa sökresultatet i <section>-elementet med id "search-result"
 function clearSearchResult() {
     searchResultEl.innerHTML = "";
     searchInput.value = '';
     };
 
+// skapa en eventlyssnare som lyssnar efter vad användaren skriver i sökfältet
 searchInput.addEventListener('keyup', function() {
         let input = searchInput.value;
         let matches = [];
